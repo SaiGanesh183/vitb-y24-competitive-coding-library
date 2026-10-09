@@ -16,6 +16,13 @@ class BitManipulation {
     public static long toggleBit(long n, int k) {
         n=(n^(1L<<k));
         return n;
-
     }
+    public static int countSetBits(long n) {
+        int count=0;
+      while(n>0){
+        n=n&(n-1);
+        count++;
+      }
+      return count;
+}
 }
